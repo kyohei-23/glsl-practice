@@ -4,6 +4,7 @@ import { FC, useEffect, useMemo, useRef } from 'react'
 import { MeshProps, useThree } from '@react-three/fiber'
 import { Vector2, Texture, ShaderMaterial } from 'three'
 import { useTexture } from '@react-three/drei'
+import gsap from 'gsap'
 
 
 
@@ -22,7 +23,9 @@ export const Plane:FC<MeshProps & { index: number }> =  props =>{
         u_time: { value: 0.0 },
         u_mouse: { value: new Vector2(0, 0) },
         u_dist: { value: 0.0 },
-        u_texture: { value: textures.at(index) }
+        u_texture: { value: textures.at(index) },
+        u_texture_old: { value: textures.at(0) },
+        u_progress: { value: 0.0 }
     })
     , [index])
 
@@ -45,7 +48,16 @@ export const Plane:FC<MeshProps & { index: number }> =  props =>{
         const liArr = document.querySelectorAll('li')
         liArr.forEach((li, idx)=>{
             li.addEventListener('mouseover',()=>{
+                uniform.u_texture_old.value = uniform.u_texture.value
                 uniform.u_texture.value = textures.at(idx)
+                gsap.fromTo(uniform.u_progress, {
+                    value: 0.0
+                },
+                {
+                    value: 1.0,
+                    duration: .3,
+                    ease: "power2.ease"
+                })
             })
         })
     },[])
