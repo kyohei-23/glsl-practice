@@ -10,7 +10,10 @@ export const Nav:FC = () => {
           { 
             routerSource.map(({path, labelTxt})=>{
               return (
-                <li className={"text-2xl hover:underline capitalize"}>
+                <li
+                  key={path}
+                  className={"text-2xl hover:underline capitalize"}
+                >
                   <Link to={path!}>
                     { labelTxt }
                   </Link>
