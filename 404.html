@@ -7,8 +7,9 @@
 </head>
 <body>
   <script>
-    sessionStorage.setItem("targetPath", location.pathname)
-    location.href = "/"
+    history.replaceState({
+      targetPath: location.pathname
+    }, '', "/")
   </script>
 </body>
 </html>
