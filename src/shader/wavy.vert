@@ -7,6 +7,6 @@ varying vec2 v_uv;
 void main(){
   v_uv = uv;
   vec3 pos = position;
-  pos.z += cos(pos.x + pos.y) * .5 * tan(u_time);
+  pos.z += sin(pos.x + u_time) * .2;
   gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
 }
