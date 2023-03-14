@@ -10,7 +10,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   </React.StrictMode>
 )
 
-const notFoundPath = history.state?.targetPath
+const notFoundPath = sessionStorage.getItem("targetPath")
 if(notFoundPath){
-  redirect(`/${notFoundPath}`)
+  redirect(notFoundPath)
+  sessionStorage.removeItem("targetPath")
 }
