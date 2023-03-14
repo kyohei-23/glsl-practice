@@ -13,5 +13,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 const notFoundPath = sessionStorage.getItem("targetPath")
 if(notFoundPath){
   redirect(notFoundPath)
-  sessionStorage.removeItem("targetPath")
 }
