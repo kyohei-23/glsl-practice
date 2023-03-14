@@ -6,7 +6,7 @@ export const Nav:FC = () => {
   return (
     <main>
       <nav>
-        <ul className={"grid grid-cols-2 max-w-7xl mx-auto py-12 gap-4"}>
+        <ul className={"grid grid-cols-2 w-[min(80rem, calc(100% - 1rem))] mx-auto py-12 gap-4"}>
           { 
             routerSource.map(({path, labelTxt})=>{
               return (
