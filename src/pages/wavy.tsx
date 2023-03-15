@@ -3,6 +3,7 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { FC } from "react";
 import vertexShader from '/src/shader/wavy.vert?raw'
 import fragmentShader from '/src/shader/wavy.frag?raw'
+import { Container } from '../components/Container';
 
 const Plane:FC = () => {
   const { clock } = useThree()
@@ -39,12 +40,12 @@ const Plane:FC = () => {
 
 export const Wavy:FC = () => {
   return (
-    <div className={"h-screen w-full"}>
+    <Container>
       <Canvas dpr={[1,2]}>
         <ambientLight intensity={ 0.1 } />
         <directionalLight position={[ 0, 0, 5 ]} />
         <Plane />
       </Canvas>
-    </div>
+    </Container>
   )
 }
