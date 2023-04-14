@@ -11,11 +11,10 @@ export const Plane:FC<ShaderProps> = ({
   vertexShader,
   fragmentShader
 }) => {
-  const { clock } = useThree()
   const texture = useTexture('https://source.unsplash.com/F1tIyqDysbs')
   
   const uniform = {
-    u_time:{ value: clock.getElapsedTime() },
+    u_time:{ value: 0},
     u_texture: {value: texture}
   }
 
