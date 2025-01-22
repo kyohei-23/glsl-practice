@@ -58,8 +58,8 @@ importers:
         specifier: ^4.6.3
         version: 4.9.5
       vite:
-        specifier: ^4.5.5
-        version: 4.5.5(@types/node@18.15.3)
+        specifier: ^4.5.6
+        version: 4.5.6(@types/node@18.15.3)
 
 packages:
 
@@ -683,8 +683,8 @@ packages:
   fraction.js@4.2.0:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
 
-  fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
@@ -1086,8 +1086,8 @@ packages:
     resolution: {integrity: sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==}
     engines: {node: '>= 4'}
 
-  vite@4.5.5:
-    resolution: {integrity: sha512-ifW3Lb2sMdX+WU91s3R0FyQlAyLxOzCSCP37ujw0+r5POeHPwe6udWVIElKQq8gk3t7b8rkmvqC6IHBpCff4GQ==}
+  vite@4.5.6:
+    resolution: {integrity: sha512-ElBNuVvJKslxcfY2gMmae5IjaKGqCYGicCNZ+8R56sAznobeE3pI9ctzI17cBS/6OJh5YuQNMSN4BP4dRjugBg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
@@ -1694,7 +1694,7 @@ snapshots:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
 
   color-convert@1.9.3:
     dependencies:
@@ -1787,7 +1787,7 @@ snapshots:
 
   fraction.js@4.2.0: {}
 
-  fsevents@2.3.2:
+  fsevents@2.3.3:
     optional: true
 
   function-bind@1.1.1: {}
@@ -2026,7 +2026,7 @@ snapshots:
 
   rollup@3.29.5:
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
 
   run-parallel@1.2.0:
     dependencies:
@@ -2141,14 +2141,14 @@ snapshots:
 
   utility-types@3.10.0: {}
 
-  vite@4.5.5(@types/node@18.15.3):
+  vite@4.5.6(@types/node@18.15.3):
     dependencies:
       esbuild: 0.18.20
       postcss: 8.4.31
       rollup: 3.29.5
     optionalDependencies:
       '@types/node': 18.15.3
-      fsevents: 2.3.2
+      fsevents: 2.3.3
 
   webgl-constants@1.1.1: {}
 
